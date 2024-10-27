@@ -10,7 +10,7 @@ function checkHit(hole) {
                 alert(`Победа!`)
                 window.location.reload();
             }
-        } else {
+        } else if (hole.className.includes('hole')) {
             loses += 1;
             document.getElementById('lost').innerHTML = loses;
             if (loses === 5) {
